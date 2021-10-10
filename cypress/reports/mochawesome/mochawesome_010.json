@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-10-04T17:23:32.161Z",
+    "end": "2021-10-04T17:27:36.999Z",
+    "duration": 244838,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "829b9205-5c65-40fd-beb3-69bf8e49eb83",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/dropdown.test.js",
+      "file": "cypress/integration/mytests/dropdown.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6464e26-9633-48ac-9a1b-8cd0c297890a",
+          "title": "Test Drop down feature in Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "With Select tag testing",
+              "fullTitle": "Test Drop down feature in Cypress With Select tag testing",
+              "timedOut": null,
+              "duration": 93081,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.orangehrm.com/orangehrm-30-day-trial\");\ncy.get('#Form_submitForm_Country').select('India').should('have.value', 'India');",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `15000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `15000ms` to complete.\n    at https://www.orangehrm.com/__cypress/runner/cypress_runner.js:157446:81\n    at tryCatcher (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:13212:23)\n    at https://www.orangehrm.com/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://www.orangehrm.com/__cypress/runner/cypress_runner.js:7798:14)",
+                "diff": null
+              },
+              "uuid": "5f2e6bcd-424b-43ba-92a2-15491ba941a0",
+              "parentUUID": "c6464e26-9633-48ac-9a1b-8cd0c297890a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Google search test",
+              "fullTitle": "Test Drop down feature in Cypress Google search test",
+              "timedOut": null,
+              "duration": 34897,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Boostrap Drop down\ncy.visit(\"https://www.google.com\");\ncy.get(\"[name='q']\").type(\"cypress\");\ncy.get(\".OBMEnb\").find(\"li span\").contains(\"cypress testing\").click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li span`, but never found it. Queried from element: <div#shJ2Vb.OBMEnb>",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `li span`, but never found it. Queried from element: <div#shJ2Vb.OBMEnb>\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress\\integration\\mytests\\dropdown.test.js:108:23)",
+                "diff": null
+              },
+              "uuid": "8c18bc5f-387e-42e6-957d-4857a7121c34",
+              "parentUUID": "c6464e26-9633-48ac-9a1b-8cd0c297890a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Automation Ecommerce search test",
+              "fullTitle": "Test Drop down feature in Cypress Automation Ecommerce search test",
+              "timedOut": null,
+              "duration": 45191,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.automationpractice.com/index.php\");\ncy.get(\"#search_query_top\").type(\"dress\");\ncy.get(\".ac_results\").find(\"li\").contains(\"T-shirts\").click();",
+              "err": {},
+              "uuid": "aeb6c17b-c03c-46f2-997d-87c99b21a0f4",
+              "parentUUID": "c6464e26-9633-48ac-9a1b-8cd0c297890a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aeb6c17b-c03c-46f2-997d-87c99b21a0f4"
+          ],
+          "failures": [
+            "5f2e6bcd-424b-43ba-92a2-15491ba941a0",
+            "8c18bc5f-387e-42e6-957d-4857a7121c34"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 173169,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

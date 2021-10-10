@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-04T17:33:35.326Z",
+    "end": "2021-10-04T17:34:03.077Z",
+    "duration": 27751,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3538ebbf-d3c7-4974-809c-5c519411400b",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/multiplefileUpload.test.js",
+      "file": "cypress/integration/mytests/multiplefileUpload.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8a2f351-c11e-4c24-9411-e36d80baf325",
+          "title": "Multiple File Upload use cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "multiple files upload",
+              "fullTitle": "Multiple File Upload use cases multiple files upload",
+              "timedOut": null,
+              "duration": 12118,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\nconst yourFixturePath = 'image1.jpeg';\nconst yourFixturePath1 = 'upload.txt';\nconst yourFixturePath2 = 'example.json';\ncy.get('#filesToUpload').attachFile(yourFixturePath).attachFile(yourFixturePath1).attachFile(yourFixturePath2);\ncy.get('p:nth-child(6) > strong').should('contain.text', 'Files You Selected:');",
+              "err": {},
+              "uuid": "22740b37-6217-4122-bb5c-272062bf8131",
+              "parentUUID": "c8a2f351-c11e-4c24-9411-e36d80baf325",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "change file name while uploading",
+              "fullTitle": "Multiple File Upload use cases change file name while uploading",
+              "timedOut": null,
+              "duration": 6720,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\nconst yourFixturePath = 'image1.jpeg';\ncy.get('#filesToUpload').attachFile({\n  filePath: yourFixturePath,\n  fileName: 'users.json'\n});\ncy.get('p:nth-child(6) > strong').should('contain.text', 'Files You Selected:');",
+              "err": {},
+              "uuid": "c135f0c3-4747-4acb-9390-ecdbb55af15a",
+              "parentUUID": "c8a2f351-c11e-4c24-9411-e36d80baf325",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "22740b37-6217-4122-bb5c-272062bf8131",
+            "c135f0c3-4747-4acb-9390-ecdbb55af15a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18838,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "chromeWebSecurity":false,
+    "defaultCommandTimeout" : 10000,
+    "execTimeout": 60000,
+    "pageLoadTimeout" : 60000,
+    "ignoreTestFiles" : "**/other/*",
+    "requestTimeout" : 15000,
+    "responseTimeout" : 15000,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+      "configFile": "reporter-config.json",
+      "reportDir":"cypress/reports", 
+      "reportFilename": "report",
+      "overwrite": false,
+      "html": true,
+      "json": true, 
+      "charts": true
+    },
+    "video": false,
+    "env":{
+      "retries": { "openMode": 0, "runMode": 2 },
+      "first_name":"sarah",
+      "last_name" :"taylor" 
+    }
+  }

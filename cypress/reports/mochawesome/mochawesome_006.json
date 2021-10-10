@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-10-04T17:11:44.860Z",
+    "end": "2021-10-04T17:14:48.172Z",
+    "duration": 183312,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d3aacf86-608f-4541-81a9-ee5e073af81a",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/browser_backforth_simu.test.js",
+      "file": "cypress/integration/mytests/browser_backforth_simu.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1560cf4a-88e3-418c-8051-bd6bf4c37f5c",
+          "title": "Back and Forward Button simulation in Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Back forward test",
+              "fullTitle": "Back and Forward Button simulation in Cypress Back forward test",
+              "timedOut": null,
+              "duration": 96718,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.freshworks.com\", {\n  failOnStatusCode: false\n});\ncy.contains('Customers').click();\ncy.url().should('include', '/customers'); //chai Query asssertion\ncy.go('back', {\n  timeout: 60000\n}); //similar to cy.go(-1,,{timeout:60000})\ncy.wait(200);\ncy.go('forward', {\n  timeout: 60000\n}); //similar to cy.go(1,{timeout:60000})",
+              "err": {
+                "message": "CypressError: `cy.screenshot()` timed out waiting `15000ms` to complete.",
+                "estack": "CypressError: `cy.screenshot()` timed out waiting `15000ms` to complete.\n    at https://www.freshworks.com/__cypress/runner/cypress_runner.js:157446:81\n    at tryCatcher (https://www.freshworks.com/__cypress/runner/cypress_runner.js:13212:23)\n    at https://www.freshworks.com/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://www.freshworks.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.freshworks.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.freshworks.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.freshworks.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.freshworks.com/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://www.freshworks.com/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://www.freshworks.com/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.freshworks.com/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://www.freshworks.com/__cypress/runner/cypress_runner.js:7798:14)",
+                "diff": null
+              },
+              "uuid": "92389f64-f1e0-4604-8b21-ab1664729952",
+              "parentUUID": "1560cf4a-88e3-418c-8051-bd6bf4c37f5c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Back forward test for Google",
+              "fullTitle": "Back and Forward Button simulation in Cypress Back forward test for Google",
+              "timedOut": null,
+              "duration": 30045,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.google.com\", {\n  failOnStatusCode: false\n});\ncy.get(\"#input\").type(\"cypress automation\").click();\ncy.go('back', {\n  timeout: 20000\n}); //same  as cy.go(-1)\ncy.wait(200);\ncy.go('forward', {\n  timeout: 20000\n}); //same  as cy.go(1)",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `#input`, but never found it.\n    at Context.eval (https://www.google.com/__cypress/tests?p=cypress\\integration\\mytests\\browser_backforth_simu.test.js:120:8)",
+                "diff": null
+              },
+              "uuid": "5c05640e-d8a4-4aa1-a366-7f827ae7cfec",
+              "parentUUID": "1560cf4a-88e3-418c-8051-bd6bf4c37f5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "92389f64-f1e0-4604-8b21-ab1664729952",
+            "5c05640e-d8a4-4aa1-a366-7f827ae7cfec"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 126763,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

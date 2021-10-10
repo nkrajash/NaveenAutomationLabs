@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-04T17:29:25.884Z",
+    "end": "2021-10-04T17:31:20.262Z",
+    "duration": 114378,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2cd592e1-dfb6-48c2-9669-8598b2ff02b3",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/file_upload.test.js",
+      "file": "cypress/integration/mytests/file_upload.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "619106bf-0299-4446-996f-968e851186b8",
+          "title": "File Upload use cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Simple file upload",
+              "fullTitle": "File Upload use cases Simple file upload",
+              "timedOut": null,
+              "duration": 53395,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#contact-link\").click().url().should('include', 'controller=contact');\nconst myfixturespath = \"Java.util.Collection_hierarchy.png\";\ncy.get(\"#fileUpload\").attachFile(myfixturespath);",
+              "err": {},
+              "uuid": "b989d617-892a-48f3-b7e6-9491b5484423",
+              "parentUUID": "619106bf-0299-4446-996f-968e851186b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Header: Verify if state of the Cart is kept",
+              "fullTitle": "File Upload use cases Header: Verify if state of the Cart is kept",
+              "timedOut": null,
+              "duration": 49587,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/'); //Function which asserts state of the Cart containing 1 product.\nconst testCartState = () => {\n  // cy.url().should('include', 'controller=product')\n  cy.get('.ajax_cart_quantity').first().invoke('text').should('equal', '1');\n};\ncy.log(\"hii\", testCartState); //Invoke custom command which navigates to random product page.\n// cy.clickRandomProduct();\ncy.get('.ajax_add_to_cart_button').first().click(); //Add selected product to cart\n// cy.get('#add_to_cart').click();\n//Select 'to continue shopping' on modal.\n//Assert state of cart (if it presents correct number).\ncy.get('.continue').click().then(testCartState); //Reload page \n//and assert the Cart's state (should keep previous number of products).\ncy.reload().then(testCartState);",
+              "err": {},
+              "uuid": "47467b10-3d67-4be1-aa16-ed5d9f464899",
+              "parentUUID": "619106bf-0299-4446-996f-968e851186b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b989d617-892a-48f3-b7e6-9491b5484423",
+            "47467b10-3d67-4be1-aa16-ed5d9f464899"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 102982,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-04T17:35:23.184Z",
+    "end": "2021-10-04T17:36:06.026Z",
+    "duration": 42842,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f36a6805-8f8f-4611-868f-283200323393",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/viewports.test.js",
+      "file": "cypress/integration/mytests/viewports.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b47016ff-1966-4f83-b924-2771dce66049",
+          "title": "test different view ports- Control the size and orientation of the screen for your application",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "open in macbook-13",
+              "fullTitle": "test different view ports- Control the size and orientation of the screen for your application open in macbook-13",
+              "timedOut": null,
+              "duration": 12126,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('macbook-13');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "ca4c1949-58e4-4bfa-a70d-b6819bc4fe3b",
+              "parentUUID": "b47016ff-1966-4f83-b924-2771dce66049",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in macbook-15",
+              "fullTitle": "test different view ports- Control the size and orientation of the screen for your application open in macbook-15",
+              "timedOut": null,
+              "duration": 5384,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('macbook-15');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "8af82965-bcea-4bda-b0d9-799310d6f5d9",
+              "parentUUID": "b47016ff-1966-4f83-b924-2771dce66049",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in iphone-x",
+              "fullTitle": "test different view ports- Control the size and orientation of the screen for your application open in iphone-x",
+              "timedOut": null,
+              "duration": 5238,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-x');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "ebaa6443-68eb-49dc-88b4-105bc46666a5",
+              "parentUUID": "b47016ff-1966-4f83-b924-2771dce66049",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in 550,750",
+              "fullTitle": "test different view ports- Control the size and orientation of the screen for your application open in 550,750",
+              "timedOut": null,
+              "duration": 6682,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(550, 750); // Set viewport to 550px x 750px\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "ba64afbd-85f0-4824-8d6f-e35ce34c05ec",
+              "parentUUID": "b47016ff-1966-4f83-b924-2771dce66049",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open in ipad-2",
+              "fullTitle": "test different view ports- Control the size and orientation of the screen for your application open in ipad-2",
+              "timedOut": null,
+              "duration": 5678,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('ipad-2');\ncy.screenshot();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "77a1bef1-b0de-426d-bf51-7551b553fa19",
+              "parentUUID": "b47016ff-1966-4f83-b924-2771dce66049",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca4c1949-58e4-4bfa-a70d-b6819bc4fe3b",
+            "8af82965-bcea-4bda-b0d9-799310d6f5d9",
+            "ebaa6443-68eb-49dc-88b4-105bc46666a5",
+            "ba64afbd-85f0-4824-8d6f-e35ce34c05ec",
+            "77a1bef1-b0de-426d-bf51-7551b553fa19"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35108,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

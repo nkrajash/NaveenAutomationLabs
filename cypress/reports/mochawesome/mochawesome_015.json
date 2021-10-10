@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-04T17:34:14.347Z",
+    "end": "2021-10-04T17:35:14.463Z",
+    "duration": 60116,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6698a56-f252-47ab-9b5d-78620f4ddefd",
+      "title": "",
+      "fullFile": "cypress/integration/mytests/reload.test.js",
+      "file": "cypress/integration/mytests/reload.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2419e554-862c-4f4f-877e-5b1cf5270c39",
+          "title": "Reload a page in Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Reload test for freshworks",
+              "fullTitle": "Reload a page in Cypress Reload test for freshworks",
+              "timedOut": null,
+              "duration": 52115,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.freshworks.com\", {\n  failOnStatusCode: false\n});\ncy.contains('Customers').click();\ncy.url().should('include', '/customers'); //chai Query asssertion\ncy.reload(true, {\n  timeOut: 80000\n}).contains('customers').should(\"be.visible\"); //forceful reload",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected '<p.product_category>' to be 'visible'\n\nThis element `<p.product_category>` is not visible because its parent `<ul.l-nav-list.nav-sub-menu.persona-product-wrapper.persona-product-wrapper-v2>` has CSS property: `opacity: 0`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected '<p.product_category>' to be 'visible'\n\nThis element `<p.product_category>` is not visible because its parent `<ul.l-nav-list.nav-sub-menu.persona-product-wrapper.persona-product-wrapper-v2>` has CSS property: `opacity: 0`\n    at Context.eval (https://www.freshworks.com/__cypress/tests?p=cypress\\integration\\mytests\\reload.test.js:109:30)",
+                "diff": null
+              },
+              "uuid": "8a84e65c-84ad-4602-b0ce-d8fa77f64880",
+              "parentUUID": "2419e554-862c-4f4f-877e-5b1cf5270c39",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8a84e65c-84ad-4602-b0ce-d8fa77f64880"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52115,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
